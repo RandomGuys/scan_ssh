@@ -31,8 +31,8 @@ while (<ADDR>) {
         print GREEN,"$_ done!\n",RESET;
 }
 
-unless ( -e "tmp.pub" ) {
-	system "rm tmp.pub";
+if ( -e "tmp.pub" ) {
+	system "rm -rf tmp.pub";
 }
 
 close (ADDR);
